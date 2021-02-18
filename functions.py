@@ -77,7 +77,9 @@ def plot_prob(temp, prob, outfile, size):
     
     plt.xlabel(r'$T$ [K]')
     plt.ylabel(r'$P(T)$')
-    plt.xticks((0, 200, 400, 600, 800, 1000, 1200))
+    
+    xmax = temp[-1]
+    plt.xlim((0, xmax))
     plt.xlim((0, 1200))
     plt.ylim((0, 1))
     
